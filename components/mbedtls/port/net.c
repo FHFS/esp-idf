@@ -29,13 +29,23 @@
 
 #if !defined(MBEDTLS_NET_C)
 
+#if defined(MBEDTLS_PLATFORM_C)
+#include "mbedtls/platform.h"
+#else
+#include <stdlib.h>
+#define mbedtls_calloc    calloc
+#define mbedtls_free      free
+#define mbedtls_time      time
+#define mbedtls_time_t    time_t
+#endif
+
 #include "mbedtls/net.h"
 
 #include <string.h>
 #include <sys/types.h>
-#include <sys/socket.h>
+#include <posix/sys/socket.h>
 #include <unistd.h>
-#include <netdb.h>
+#include <lwip/netdb.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>

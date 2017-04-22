@@ -76,8 +76,25 @@ SECTIONS
     /* Code marked as runnning out of IRAM */
     _iram_text_start = ABSOLUTE(.);
     *(.iram1 .iram1.*)
-    *libfreertos.a:(.literal .text .literal.* .text.*)
-    *libesp32.a:panic.o(.literal .text .literal.* .text.*)
+    *croutine.o(.literal .text .literal.* .text.*)
+    *event_groups.o(.literal .text .literal.* .text.*)
+    *FreeRTOS-openocd.o(.literal .text .literal.* .text.*)
+    *heap_regions.o(.literal .text .literal.* .text.*)
+    *heap_regions_debug.o(.literal .text .literal.* .text.*)
+    *list.o(.literal .text .literal.* .text.*)
+    *port.o(.literal .text .literal.* .text.*)
+    *portasm.o(.literal .text .literal.* .text.*)
+    *queue.o(.literal .text .literal.* .text.*)
+    *ringbuf.o(.literal .text .literal.* .text.*)
+    *tasks.o(.literal .text .literal.* .text.*)
+    *timers.o(.literal .text .literal.* .text.*)
+    *xtensa_context.o(.literal .text .literal.* .text.*)
+    *xtensa_init.o(.literal .text .literal.* .text.*)
+    *xtensa_intr.o(.literal .text .literal.* .text.*)
+    *xtensa_intr_asm.o(.literal .text .literal.* .text.*)
+    *xtensa_overlay_os_hook.o(.literal .text .literal.* .text.*)
+    *xtensa_vectors.o(.literal .text .literal.* .text.*)
+    *panic.o(.literal .text .literal.* .text.*)
     *libphy.a:(.literal .text .literal.* .text.*)
     *librtc.a:(.literal .text .literal.* .text.*)
     *libpp.a:(.literal .text .literal.* .text.*)
@@ -123,7 +140,7 @@ SECTIONS
     KEEP(*(.gnu.linkonce.s2.*))
     KEEP(*(.jcr))
     *(.dram1 .dram1.*)
-    *libesp32.a:panic.o(.rodata .rodata.*)
+    *panic.o(.rodata .rodata.*)
     _data_end = ABSOLUTE(.);
     . = ALIGN(4);
     _heap_start = ABSOLUTE(.);

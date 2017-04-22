@@ -26,7 +26,7 @@
 #define NGHTTP2_INT_H
 
 #ifdef HAVE_CONFIG_H
-#include <config.h>
+#include <nghttp-config.h>
 #endif /* HAVE_CONFIG_H */
 
 /* Macros, types and constants for internal use */

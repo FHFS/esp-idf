@@ -30,7 +30,7 @@
 #include "gki.h"
 #include "l2c_api.h"
 #include "l2cdefs.h"
-#include "list.h"
+#include "bt_list.h"
 
 #define L2CAP_MIN_MTU   48      /* Minimum acceptable MTU is 48 bytes */
 

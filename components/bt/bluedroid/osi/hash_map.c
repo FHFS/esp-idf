@@ -18,7 +18,7 @@
 
 #include "bt_defs.h"
 #include "bt_trace.h"
-#include "list.h"
+#include "bt_list.h"
 #include "hash_map.h"
 #include "allocator.h"
 

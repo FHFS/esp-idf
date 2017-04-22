@@ -34,7 +34,7 @@
 #include "btm_int.h"
 #include "btm_ble_int.h"
 #include "hcimsgs.h"
-#include "aes.h"
+#include "bt_aes.h"
 #include "p_256_ecc_pp.h"
 #include "controller.h"
 

@@ -19,7 +19,7 @@
 #include "bt_defs.h"
 #include "allocator.h"
 #include "fixed_queue.h"
-#include "list.h"
+#include "bt_list.h"
 #include "osi.h"
 #include "osi_arch.h"
 #include "bt_trace.h"
